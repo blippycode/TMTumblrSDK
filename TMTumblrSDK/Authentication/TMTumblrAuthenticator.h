@@ -21,8 +21,6 @@ typedef void (^TMAuthenticationCallback)(NSString *, NSString *, NSError *);
 
 + (TMTumblrAuthenticator *)sharedInstance;
 
-#ifdef __ENVIRONMENT_MAC_OS_X_VERSION_MIN_REQUIRED__
-
 /**
  Authenticate via three-legged OAuth.
  
@@ -40,8 +38,6 @@ typedef void (^TMAuthenticationCallback)(NSString *, NSString *, NSError *);
  This method is the last part of the authentication flow started by calling `authenticate:callback:`
  */
 - (BOOL)handleOpenURL:(NSURL *)url;
-
-#endif
 
 /**
  Authenticate via xAuth.
